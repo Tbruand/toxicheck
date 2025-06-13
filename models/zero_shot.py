@@ -5,7 +5,9 @@ class ZeroShotModel(BaseModel):
     def __init__(self):
         self.classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
-    def predict(self, text: str) -> str:
+    def predict(self, text: str) -> tuple[str, float]:
         labels = ["toxique", "non-toxique"]
         result = self.classifier(text, candidate_labels=labels)
-        return result["labels"][0]
+        label = result["labels"][0]
+        score = result["scores"][0]
+        return label, score
