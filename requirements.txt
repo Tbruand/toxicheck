@@ -1,0 +1,6 @@
+gradio
+transformers
+scikit-learn
+pandas
+pytest
+commitizen

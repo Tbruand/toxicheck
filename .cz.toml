@@ -1,0 +1,29 @@
+[tool.commitizen]
+name = "cz_customize"
+tag_format = "v$version"
+version = "0.1.0"
+version_scheme = "semver"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[tool.commitizen.customize]
+message_template = "{{type}}({{scope}}): {{message}}"
+questions = [
+    { name = "type", type = "list", message = "Select the type of change you are committing", choices = [
+        { value = "feat", name = "feat: A new feature. Correlates with MINOR in SemVer" },
+        { value = "fix", name = "fix: A bug fix. Correlates with PATCH in SemVer" },
+        { value = "docs", name = "docs: Documentation only changes" },
+        { value = "style", name = "style: Changes that do not affect the meaning of the code" },
+        { value = "refactor", name = "refactor: A code change that neither fixes a bug nor adds a feature" },
+        { value = "perf", name = "perf: A code change that improves performance" },
+        { value = "test", name = "test: Adding or correcting tests" },
+        { value = "build", name = "build: Changes that affect the build system or dependencies" },
+        { value = "ci", name = "ci: Changes to CI/CD configuration" },
+        { value = "chore", name = "chore: Routine tasks like config or meta updates" }
+    ] },
+    { name = "scope", type = "input", message = "What is the scope of this change (e.g. component or file name):" },
+    { name = "message", type = "input", message = "Write a short, imperative tense description of the change:" },
+    { name = "body", type = "input", message = "Provide a longer description of the change (optional):" },
+    { name = "is_breaking_change", type = "confirm", message = "Are there any breaking changes?" },
+    { name = "breaking_change", type = "input", message = "Describe the breaking changes:" }
+]
