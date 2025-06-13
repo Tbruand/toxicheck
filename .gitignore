@@ -23,13 +23,11 @@ __pycache__/
 .cache/
 htmlcov/
 
-# Fichiers de modèles
-models/
-*.pt
-*.pth
-*.h5
-*.ckpt
-*.joblib
+# Ignore les fichiers de modèle mais pas les scripts
+models/*.pt
+models/*.pth
+models/report.json
+models/test_model.pt
 
 # Artefacts
 *.csv
