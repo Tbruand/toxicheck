@@ -1,0 +1,54 @@
+# Environnement virtuel
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Notebooks temporaires
+.ipynb_checkpoints/
+
+# Fichiers temporaires
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# Tests
+.coverage
+.tox/
+.cache/
+htmlcov/
+
+# Fichiers de modèles
+models/
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.joblib
+
+# Artefacts
+*.csv
+*.tsv
+*.json
+*.xls*
+*.db
+*.sqlite
+
+# CI/CD / commitizen
+cz.yaml
+cz.toml
+cz.json
+
+# VSCode / PyCharm / JetBrains
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+ehthumbs.db
