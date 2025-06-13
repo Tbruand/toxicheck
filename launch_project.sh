@@ -15,12 +15,6 @@ fi
 echo "📦 Installation des dépendances..."
 pip install -r requirements.txt
 
-# 3. Vérifie que les hooks sont bien installés
-if [ ! -f ".git/hooks/commit-msg" ]; then
-  echo "🔧 Installation des hooks Commitizen..."
-  cz install
-fi
-
-# 4. Lancement de l'app Gradio
+# 3. Lancement de l'app Gradio
 echo "🧪 Lancement de l'application Gradio..."
 python main.py
