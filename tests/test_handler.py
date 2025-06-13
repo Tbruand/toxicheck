@@ -8,11 +8,11 @@ def test_zero_shot_prediction_output():
     text_1 = "Tu es complètement stupide"
     text_2 = "Je te remercie pour ton aide"
     
-    output_1 = predict(text_1)
-    output_2 = predict(text_2)
+    label_1, score_1 = predict(text_1)
+    label_2, score_2 = predict(text_2)
 
-    print(f"Prediction 1: {output_1}")
-    print(f"Prediction 2: {output_2}")
+    print(f"Prediction 1: {label_1} ({score_1:.2f})")
+    print(f"Prediction 2: {label_2} ({score_2:.2f})")
 
-    assert output_1 in ["toxique", "non-toxique"]
-    assert output_2 in ["toxique", "non-toxique"]
+    assert label_1 in ["toxique", "non-toxique"]
+    assert label_2 in ["toxique", "non-toxique"]
