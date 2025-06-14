@@ -4,4 +4,5 @@ torch
 scikit-learn
 pandas
 pytest
+pytest-cov
 commitizen
