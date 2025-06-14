@@ -1,8 +1,8 @@
 import gradio as gr
 from app.handler import predict
 
-def launch_app():
-    iface = gr.Interface(
+def create_interface():
+    return gr.Interface(
         fn=predict,
         inputs=[
             gr.Textbox(label="Texte à analyser"),
@@ -12,4 +12,7 @@ def launch_app():
         title="🧪 ToxiCheck",
         description="Entrez un texte pour détecter s'il est toxique. Résultat avec score de confiance pour chaque label."
     )
+
+def launch_app():
+    iface = create_interface()
     iface.launch()
