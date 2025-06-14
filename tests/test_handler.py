@@ -15,3 +15,13 @@ def test_zero_shot_prediction_output():
     assert "**toxique**" in output
     assert "**non-toxique**" in output
     assert "%" in output
+
+def test_few_shot_prediction_output():
+    from app.handler import predict
+    text = "Tu es un abruti fini"
+    output = predict(text, model_type="few-shot")
+
+    print("Résultat few-shot :", output)
+
+    assert "### Résultat de la classification" in output
+    assert "toxique" in output or "non-toxique" in output
