@@ -6,8 +6,9 @@ class FewShotModel(BaseModel):
         # On utilise un modèle préentraîné pour la classification de texte
         self.classifier = pipeline("text-classification", model="textattack/roberta-base-rotten-tomatoes")
 
-    def predict(self, text: str) -> str:
+    def predict(self, text: str) -> list[tuple[str, float]]:
         result = self.classifier(text, truncation=True)[0]
         label = result["label"].lower()
-        # Conversion binaire "positive"/"negative" en "non-toxique"/"toxique"
-        return "non-toxique" if "pos" in label else "toxique"
+        score = result["score"]
+        label = "non-toxique" if "pos" in label else "toxique"
+        return [(label, score)]
