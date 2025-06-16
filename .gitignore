@@ -24,6 +24,7 @@ __pycache__/
 htmlcov/
 
 # Ignore les fichiers de modèle mais pas les scripts
+models/
 models/*.pt
 models/*.pth
 models/report.json
