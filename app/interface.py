@@ -6,7 +6,7 @@ def create_interface():
         fn=predict,
         inputs=[
             gr.Textbox(label="Texte à analyser"),
-            gr.Dropdown(choices=["zero-shot", "few-shot"], label="Type de modèle", value="zero-shot")
+            gr.Dropdown(choices=["zero-shot", "few-shot", "fine-tuned"], label="Type de modèle", value="zero-shot")
         ],
         outputs="markdown",
         title="🧪 ToxiCheck",
