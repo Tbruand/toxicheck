@@ -25,3 +25,12 @@ def test_few_shot_prediction_output():
 
     assert "### Résultat de la classification" in output
     assert "toxique" in output or "non-toxique" in output
+
+def test_fine_tuned_prediction_output():
+    text = "Tu es stupide"
+    output = predict(text, model_type="fine-tuned")
+
+    print("Résultat fine-tuned :", output)
+
+    assert "### Résultat de la classification" in output
+    assert "toxique" in output or "non-toxique" in output
