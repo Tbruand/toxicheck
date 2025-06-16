@@ -36,6 +36,8 @@ models/test_model.pt
 *.xls*
 *.db
 *.sqlite
+*.bin
+*.bpe.model
 
 # CI/CD / commitizen
 cz.yaml

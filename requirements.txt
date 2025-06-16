@@ -6,3 +6,6 @@ pandas
 pytest
 pytest-cov
 commitizen
+datasets
+sentencepiece
+accelerate
