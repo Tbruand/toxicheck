@@ -1,0 +1,11 @@
+gradio
+transformers
+torch
+scikit-learn
+pandas
+pytest
+pytest-cov
+commitizen
+datasets
+sentencepiece
+accelerate

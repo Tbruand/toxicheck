@@ -1,0 +1,55 @@
+# Environnement virtuel
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Notebooks temporaires
+.ipynb_checkpoints/
+
+# Fichiers temporaires
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# Tests
+.coverage
+.tox/
+.cache/
+htmlcov/
+
+# Ignore les fichiers de modèle mais pas les scripts
+models/
+models/*.pt
+models/*.pth
+models/report.json
+models/test_model.pt
+
+# Artefacts
+*.csv
+*.tsv
+*.json
+*.xls*
+*.db
+*.sqlite
+*.bin
+*.bpe.model
+
+# CI/CD / commitizen
+cz.yaml
+cz.toml
+cz.json
+
+# VSCode / PyCharm / JetBrains
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+ehthumbs.db
