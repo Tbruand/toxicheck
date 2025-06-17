@@ -45,5 +45,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add space https://Tbruand:$HF_TOKEN@huggingface.co/spaces/Tbruand/toxicheck || true
+          git remote add space https://Tbruand:$HF_TOKEN@huggingface.co/spaces/Ymokay/ToxiCheck || true
           git push space main --force
